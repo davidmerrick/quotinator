@@ -1,0 +1,21 @@
+service: quotinator
+
+provider:
+  name: aws
+  runtime: java8
+  region: us-west-2
+  memorySize: 1472
+  profile: serverless_deploy
+  stage: prd
+
+package:
+  artifact: build/libs/quotinator-prd-all.jar
+
+functions:
+  quotinator:
+    handler: com.merricklabs.RandomQuoteHandler
+    events:
+      - http:
+          method: get
+          path: quotes/random
+          cors: true
