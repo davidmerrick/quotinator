@@ -11,7 +11,7 @@ Quotes are structured like this:
 }
 ```
 
-The list of them is in the `com.merricklabs.quotes.json` resource file. 
+The list of them is in the `com.merricklabs.logic.quotes.json` resource file. 
 Eventually I'll move this to S3 so this can be modified without a redeploy.
 
 # Setup:
