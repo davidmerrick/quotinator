@@ -2,9 +2,15 @@ AWS Lambda service, written in [Kotlin](https://kotlinlang.org/), that returns a
 
 Uses the [Serverless](https://serverless.com/) framework for deployment and provisioning resources.
 
-Writing this to get more familiar with developing in Lambda with Kotlin.
+I wrote this to get more familiar with Kotlin.
 
-Quotes are structured like this: 
+# Live demo
+
+https://projects.david-merrick.com/2018/quotinator/
+
+# API
+
+The API simply returns a single quote, structured as follows:
 
 ```json
 {
@@ -13,7 +19,7 @@ Quotes are structured like this:
 }
 ```
 
-The list of them is in the `com.merricklabs.logic.quotes.json` resource file. 
+The list of quotes is stored the `com.merricklabs.logic.quotes.json` resource file. 
 Eventually I'll move this to S3 so this can be modified without a redeploy.
 
 # Setup:
