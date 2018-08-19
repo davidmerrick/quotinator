@@ -1,4 +1,4 @@
-AWS Lambda service, written in Kotlin, that returns a JSON payload containing a random quote from a list of quotes. 
+AWS Lambda service, written in [Kotlin](https://kotlinlang.org/), that returns a JSON payload containing a random quote from a list of quotes. 
 
 Uses the [Serverless](https://serverless.com/) framework for deployment and provisioning resources.
 
