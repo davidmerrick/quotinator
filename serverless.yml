@@ -9,6 +9,12 @@ provider:
   stage: prd
   apiKeys:
     - secret
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+      - s3:GetObject
+      Resource:
+      - arn:aws:s3:::quotinator-quotes/*
 
 package:
   artifact: build/libs/quotinator-prd-all.jar
@@ -22,3 +28,11 @@ functions:
           path: quotes/random
           cors: true
           private: true
+
+resources:
+  Resources:
+    quotesBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: quotinator-quotes
+        AccessControl: Private
